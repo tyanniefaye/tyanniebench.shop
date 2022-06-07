@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bench Shop</title>
+
+<link rel="stylesheet" href="css/Style.css" type="text/css">
+
+</head>
+
+<body>
+
+<nav id="navbar">
+	<a href="index.html" id="logo"><img src="logo/bench-logo.png" width="130px" height="60px"></a>
+	<h1 id="logo">Bench Shop</h1>
+	<div id="navbar-right">
+		<h1><a href="index.html">Home</a><h1>
+		<h1><a class="active" href="about.html">About</a><h1>
+		<h1><a class="active" href="product.html">Products</a><h1>
+		<h1><a class="active" href="contact.html">Contact</a><h1>
+	</div>
+	</div>
+</nav>
+<header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Slider/slide1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide4.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); 
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").style.padding = "0px 0px";
+    document.getElementById("logo").style.fontSize = "0px";
+  } else {
+    document.getElementById("navbar").style.padding = "10px 0px";
+    document.getElementById("logo").style.fontSize = "8px";
+  }	
+}
+</script>
+</header>
+<div class="pad"> </div>
+<section id="secpromo">
+<img src="icon/promo.png">
+</section>
+<section id="sec">
+		<section id="sec1">
+		<br />
+			<img src="promo/promo1.png">
+		</section>
+		
+		<section id="sec2">
+		<br />
+			<img src="promo/promo2.png">
+		</section>
+		
+		<section id="sec3">
+		<br />
+			<img src="promo/promo3.png">
+		</section>
+		
+</section>
+<section id="sectop">
+		<section id="sec1">
+		<br />
+			<h1 class="headpad1">Hot Deals</h1>
+		<br /><br />
+		<div class="gallery1">
+			<a href="#" target="_blank" ><img src="products/Wood/1.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery1">
+			<a href="#" target="_blank" ><img src="products/Wood/2.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery1">
+			<a href="#" target="_blank" ><img src="products/Wood/3.jpg" height="250" width="250"></a>
+        </div>
+		</section>
+		
+		<section id="sec2">
+		<br />
+			<h1>Top Sales</h1>
+		<br /><br />
+		<div class="gallery2">
+			<a href="#" target="_blank"><img src="products/Plastic/1.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery2">
+			<a href="#" target="_blank"><img src="products/Plastic/2.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery2">
+			<a href="#" target="_blank"><img src="products/Plastic/3.jpg" height="250" width="250"></a>
+        </div>
+		</section>
+		
+		<section id="sec3">
+		<br />
+			<h1 class="headpad3">Trending</h1>
+		<br /><br />
+		<div class="gallery3">
+			<a href="#" target="_blank"><img src="products/Futuristic/1.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery3">
+			<a href="#" target="_blank"><img src="products/Futuristic/2.jpg" height="250" width="250"></a>
+        </div>
+		
+		<br /><br />
+		<div class="gallery3">
+			<a href="#" target="_blank"><img src="products/Futuristic/3.jpg" height="250" width="250"></a>
+        </div>
+		</section>
+</section>
+<br />
+<hr>
+<footer>
+	<br />
+	<section id="secfoot">
+		<section id="secfoot1">
+			<h3 class="sf1">Company</h3>
+			<br />
+			<p><a href="#">Home</a></p>
+			<p><a href="#">About BENCH</a></p>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+		<section id="secfoot2">
+			<h3 class="sf1">Get Help</h3>
+			<br />
+			<p><a href="#">Customer Support</a></p>
+			<p><a href="#">Return Policy</a></p>
+			<p><a href="#">Terms of Use</a></p>
+			<p><a href="#">Privacy Statement</a></p>
+			<br />
+			<br />
+		</section>
+		<section id="secfoot3">
+			<h3 class="sf1">Contact Us</h3>
+			<br />
+			<p>Brgy. San Isidro</p>
+			<p>Cabangan, Zambales</p>
+			<p>E-mail:</p>
+			<p><a href="#">info@benchshop.com<a></p>
+			<p>Phone:</p>
+			<p>+63909 123 4567</p>
+		</section>
+		<section id="secfoot4">
+			<h3 class="sf1">Customer Care</h3>
+			<br />
+			<p><a href="#">Skype ID: benchshop</a></p>
+			<p><a href="#">support@benchshop.com</a></p>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+		<section id="secfoot5">
+			<h3 class="sf1">Join Us:</h3>
+			<p>
+				<a href="https://web.facebook.com" target="_blank"><img src="icon/social_fb.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_twitter.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_insta.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_youtube.png" height="25px" width="25px"></a>
+			</p>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+	</section>
+<footer>
+<br />
+	<div class="feet">
+		<p>&#9400; 2022 thianniebenchshop.com </p> 
+<br> All Rights Reserved
+	</div>
+</body>
+</html>

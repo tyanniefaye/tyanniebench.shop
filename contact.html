@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bench Shop</title>
+
+<link rel="stylesheet" href="css/Style.css" type="text/css">
+
+</head>
+
+<body>
+
+<nav id="navbar">
+	<a href="index.html" id="logo"><img src="logo/bench-logo.png" width="130px" height="60px"></a>
+	<h1 id="logo">Bench Shop</h1>
+	<div id="navbar-right">
+		<h1><a class="active" href="index.html">Home</a><h1>
+		<h1><a class="active" href="about.html">About</a><h1>
+		<h1><a class="active" href="product.html">Products</a><h1>
+		<h1><a href="#">Contact</a><h1>
+	</div>
+</nav>
+<header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Slider/slide1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Slider/slide4.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); 
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").style.padding = "0px 0px";
+    document.getElementById("logo").style.fontSize = "0px";
+  } else {
+    document.getElementById("navbar").style.padding = "10px 0px";
+    document.getElementById("logo").style.fontSize = "8px";
+  }	
+}
+</script>
+</header>
+<div class="pad"> </div>
+
+</section>
+
+
+<br />
+<br>
+
+<img src="contact/1.jpg">
+
+<br>
+
+<hr>
+
+<center>
+
+<div>
+						<h3 class="uk-card-title"> Send us your inquiries.</h3>
+						<div class=" uk-background-muted uk-card uk-card-default uk-card-body" style="padding: 30px;">
+							<form class="uk-form-stacked uk-background-muted inq-form" role="form" onsubmit="inquiryBtn.disabled = true; return true;" id="create-sub-category-form" method="POST" action="https://www.jecams.com.ph/contact-us/send-inquiry">
+								<input type="hidden" name="_token" value="OmbFzhEgxFbITNhQ2A40oPAC9kQQxQbgqWFm89Ur">																<div class="uk-margin">
+									<label class="uk-form-label" for="form-stacked-text">Full name:</label>
+									<div class="uk-form-controls">
+										<div class="uk-inline uk-width-1-1">
+											<span class="uk-form-icon uk-icon" uk-icon="icon: user"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1"> <circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle> <path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+											<input class="uk-input uk-width-1-1" required="" id="form-stacked-text" name="fullname" value="" maxlength="50" type="text" placeholder="your full name">
+										</div>
+									</div>
+								</div>
+								<div class="uk-margin">
+									<label class="uk-form-label" for="form-stacked-text">Email Address:</label>
+									<div class="uk-form-controls">
+										<div class="uk-inline uk-width-1-1">
+											<span class="uk-form-icon uk-icon" uk-icon="icon: mail"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1"> <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5"></polyline> <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path></svg></span>
+											<input class="uk-input" name="email" required="" maxlength="50" type="email" value="" placeholder="your email add">
+										</div>
+									</div>
+								</div>
+								<div class="uk-margin">
+									<label class="uk-form-label" for="form-stacked-text">Contact number:</label>
+									<div class="uk-form-controls">
+										<div class="uk-inline uk-width-1-1">
+											<span class="uk-form-icon uk-icon" uk-icon="">+63 </span>
+											<input class="uk-input uk-width-1-1" required="" id="form-stacked-text " name="contact_number" value="" type="number" min="1" placeholder="your contact number">
+										</div>
+									</div>
+								</div>
+								<div class="uk-inline uk-width-1-1">
+									<label class="uk-form-label" for="form-stacked-text">Subject:</label>
+									<div class="uk-form-controls">
+										<input class="uk-input" id="form-stacked-text" required="" type="text" name="subject" value="" placeholder="your subject">
+									</div>
+								</div>
+								<div class="uk-margin">
+									<label class="uk-form-label" for="form-stacked-text">Message:</label>
+									<div class="uk-form-controls">
+										<textarea class="uk-textarea" rows="5" required="" id="form-stacked-text" name="message" type="text" placeholder="your message">										</textarea>
+									</div>
+								</div>
+								<button type="submit" id="inquiryBtn" class="uk-button uk-button-danger uk-width-1-1">SUBMIT INQUIRY</button>
+							</form>
+						</div>
+					</div>
+
+
+
+</center>
+
+
+<hr>
+<footer>
+	<br />
+	<section id="secfoot">
+		<section id="secfoot1">
+			<h3 class="sf1">Company</h3>
+			<br />
+			<p><a href="#">Home</a></p>
+			<p><a href="#">About BENCH</a></p>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+		<section id="secfoot2">
+			<h3 class="sf1">Get Help</h3>
+			<br />
+			<p><a href="#">Customer Support</a></p>
+			<p><a href="#">Return Policy</a></p>
+			<p><a href="#">Terms of Use</a></p>
+			<p><a href="#">Privacy Statement</a></p>
+			<br />
+			<br />
+		</section>
+		<section id="secfoot3">
+			<h3 class="sf1">Contact Us</h3>
+			<br />
+			<p>Brgy. San Isidro</p>
+			<p>Cabangan, Zambales</p>
+			<p>E-mail:</p>
+			<p><a href="#">info@benchshop.com<a></p>
+			<p>Phone:</p>
+			<p>+63909 123 4567</p>
+		</section>
+		<section id="secfoot4">
+			<h3 class="sf1">Customer Care</h3>
+			<br />
+			<p><a href="#">Skype ID: benchshop</a></p>
+			<p><a href="#">support@benchshop.com</a></p>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+		<section id="secfoot5">
+			<h3 class="sf1">Join Us:</h3>
+			<p>
+				<a href="https://web.facebook.com" target="_blank"><img src="icon/social_fb.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_twitter.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_insta.png" height="25px" width="25px"></a>
+				<a href="#"><img src="icon/social_youtube.png" height="25px" width="25px"></a>
+			</p>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+	</section>
+<footer>
+<br />
+	<div class="feet">
+		<p>&#9400; 2022 thianniebenchshop.com </p> 
+<br> All Rights Reserved
+	</div>
+</body>
+</html>
